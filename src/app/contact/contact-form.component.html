@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+
+    <legend>Contact Form</legend>
+    <form class="form-horizontal col-sm-10" [formGroup]="frmContact" (ngSubmit)="onSubmit()" novalidate>
+
+      <div class="form-group">
+        <div class="input-group col-md-6">
+          <span class="input-group-addon" aria-hidden="true"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="name" formControlName="name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group col-md-6">
+          <span class="input-group-addon" aria-hidden="true"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input type="text" class="form-control" placeholder="email" formControlName="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group col-md-6">
+          <span class="input-group-addon" aria-hidden="true"><i class="glyphicon glyphicon-phone-alt"></i></span>
+          <input type="text" class="form-control" placeholder="phone" formControlName="phone">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group col-md-6">
+          <span class="input-group-addon" aria-hidden="true"><i class="glyphicon glyphicon-star"></i></span>
+          <input type="text" class="form-control" placeholder="message" formControlName="message">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" [disabled]="frmContact.invalid">Send&nbsp;&nbsp;<i class="glyphicon glyphicon-send" aria-hidden="true"></i>
+</button>
+    </form>
+<div class="form-group">
+    <div *ngIf="res">
+     <h3><span class="badge">{{ res | json }}</span></h3>
+    </div>
+  </div>
+</div>
+</div>
