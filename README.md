@@ -2,7 +2,7 @@
 
 Basic contact form in Angular 4 with Bootstrap 3.3
 
-http://technology.design
+https://technology.design
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
